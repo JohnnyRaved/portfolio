@@ -1,0 +1,169 @@
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <title>Portfolio</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-toggle/2.2.1/css/bootstrap-toggle.min.css"
+          rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.35.1/css/bootstrap-dialog.css"
+          rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <script src="https://use.edgefonts.net/source-sans-pro.js"></script>
+    <link href="portfolio.css" rel="stylesheet">
+
+    <script language="JavaScript">
+        function isTouchDevice() {
+            return "ontouchstart" in window || navigator.maxTouchPoints;
+        }
+
+        (function CheckJavascriptAndTouch() {
+            var htmlTag = document.querySelector("html");
+            var htmlClasses = htmlTag.getAttribute("class");
+            if (htmlClasses !== null) {
+                htmlTag.setAttribute("class", htmlClasses.replace("no-js", ""));
+            }
+
+            var touchClass = isTouchDevice() ? " touch" : " no-touch";
+            document.querySelector('html').className += touchClass;
+        })();
+    </script>
+
+</head>
+<body>
+<div id="navbar">
+    <div id="brand">
+        <a href="http://jdvarney.com">jdvarney.com</a>
+    </div>
+    <div id="menu">
+        <ul class="fa-ul">
+            <li><a href="https://github.com/johnnyRaved"><i class="fa-li fa fa-2x fa-github" aria-hidden="true"></i></a>
+            </li>
+            <li><a href="mailto:jdvarney@msn.com"><i class="fa-li fa fa-2x fa-envelope" aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="pageTitle">
+    <p>John D Varney</p>
+    <div class="subText">
+        - A code portfolio
+    </div>
+</div>
+
+<main class="content">
+    <section class="slideshow-content js-slideshow-content">
+        <nav>
+            <button class="slideshow-nav slideshow-nav--prev js-slideshow-previous"></button>
+            <button class="slideshow-nav slideshow-nav--next js-slideshow-next"></button>
+        </nav>
+        <div class="slideshow-container js-slideshow-container">
+            <div class="slideshow-slide js-slideshow-slide">
+                <div class="slideshow-slide--content">
+                    <div class="media">
+                        <div class="bd">
+                            <div class="photoBox">
+                                <div class="imageTitle">
+                                    Local Weather
+                                </div>
+                                <div class="imageBox">
+                                    <img src="images/weather.JPEG">
+                                </div>
+                                <div class="tallBox">
+                                    <p>Local Weather demonstrates manipulation of the Google Maps and places APIs.
+                                        The user may enter a location with autocompletion assistance, or accept the
+                                        default locaton as determined by geolocation. <br><br>Technologies: HTML 5, CSS,
+                                    JavaScript 5, Bootstrap 3, jQuery 2.2, jQuery UI 1.1 </p>
+                                    <div class="imageMenu">
+                                        <button onclick="routeURL('weather','view')" class="btn btn-default btn-xs">View Code</button>
+                                        <button onclick="routeURL('weather','visit')" class="btn btn-default btn-xs">Visit Page</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slideshow-slide js-slideshow-slide">
+                <div class="slideshow-slide--content">
+                    <div class="media">
+                        <div class="bd">
+                            <div class="photoBox">
+                                <div class="imageTitle">
+                                    Wikipedia Viewer
+                                </div>
+                                <div class="imageBox">
+                                    <img src="images/wiki.JPEG">
+                                </div>
+                                <div class="tallBox">
+                                    <div class="boxText">
+                                        <p>Wiki Viewer takes a search term provided by the user and returns a list
+                                            of up to fifty topics. The user may hover over a topic to view a tooltip
+                                            containing a summary of the related article topic.<br><br>Technologies:
+                                            HTML 5, Bootstrap 3, jQuery UI 1.1 </p>
+                                    </div>
+                                    <div class="imageMenu">
+                                        <button onclick="routeURL('wiki','view')" class="btn btn-default btn-xs">View Code</button>
+                                        <button onclick="routeURL('wiki','visit')" class="btn btn-default btn-xs">Visit Page</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slideshow-slide js-slideshow-slide">
+                <div class="slideshow-slide--content">
+                    <div class="media">
+                        <div class="bd">
+                            <div class="photoBox">
+                                <div class="imageTitle">
+                                    Twitch Streamers
+                                </div>
+                                <div class="imageBox">
+                                    <img src="images/twitch.JPEG">
+                                </div>
+                                <div class="tallBox">
+                                    <div class="boxText">
+                                        <p>Twitch viewer enables the user to view a set of Twitch users (streamers),
+                                            along with their online status. Clicking on the description area of an online
+                                            streamer takes the user to the streamer's channel. Demonstrates a custom
+                                            object to marshall asynchronous calls within an array.<br><br>Technologies:
+                                            HTML 5, Bootstrap 3, jQuery UI 1.1 </p>
+                                    </div>
+                                    <div class="imageMenu">
+                                        <button onclick="routeURL('twitch','view')" class="btn btn-default btn-xs">View Code</button>
+                                        <button onclick="routeURL('twitch','visit')" class="btn btn-default btn-xs">Visit Page</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <aside>
+            <div class="slideshow-counter js-slideshow-counter"></div>
+        </aside>
+    </section>
+</main>
+</body>
+
+<script src="http://code.jquery.com/jquery-2.2.2.js"
+        integrity="sha256-4/zUCqiq0kqxhZIyp4G0Gk+AOtCJsY1TA00k5ClsZYE="
+        crossorigin="anonymous"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"
+        integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-toggle/2.2.1/js/bootstrap-toggle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.35.1/js/bootstrap-dialog.min.js"></script>
+<script src="portfolio.js"></script>
+
+<script language="Javascript">
+    var slideshowContent = Slideshow();
+    slideshowContent.init('.js-slideshow-content', true);
+</script>
+</html>
